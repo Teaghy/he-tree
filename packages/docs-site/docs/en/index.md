@@ -2,7 +2,7 @@
 
 [中文](/zh) | [English](/)
 
-Vue tree component. Features: Vue2, Vue3, TypeScript, SSR, nested, virtual, list, draggable, sortable, placeholder for drag, table tree, based on Drag and Drop API, deal with any other code based on Drag and Drop API.
+**Vue tree component**. Features: Vue2, Vue3, TypeScript, SSR, nested, virtual, list, draggable, sortable, placeholder for drag, table tree, based on Drag and Drop API, deal with any other code based on Drag and Drop API.
 
 [Guide](./v2/guide.md) | [Demo](./v2/guide.md#Examples)
 
@@ -82,3 +82,7 @@ Vue tree component. Features: Vue2, Vue3, TypeScript, SSR, nested, virtual, list
 ## License
 
 MIT
+
+## React
+
+If you use React, check [React draggable tree component](https://he-tree-react.phphe.com)

@@ -34,6 +34,9 @@
               .shadow.rounded.text-sm
                 Anchor.block.py-2.px-3(v-for="item in versions" class="hover:bg-gray-100" :to="item.homePath") {{$t(item.version)}}
         Anchor.main-menu-item(:to="githubURL" v-if="githubURL") Github
+        Anchor.main-menu-item.buy-me-coffee(v-if="DONATE_URL" :to="DONATE_URL")
+          img(alt="Buy me a coffee" :src="coffeeImg")
+          span Buy me a coffee
         //- Anchor.main-menu-item(v-if="config.IS_DEVLOPMENT" @click="reloadRouteView()") Reload Route
         //- .flex-shrink-0.py-2.text-center
   .main-right.flex-grow.overflow-auto.relative()
@@ -69,6 +72,7 @@ import SearchModal from '../parts/SearchModal.vue'
 import { mdiMenu, mdiSearch } from 'mdi-js/filled'
 import { useRouter } from 'vue-router'
 import GithubButton from 'vue-github-button'
+import coffeeImg from "../assets/img/coffee.jpg";
 
 export default defineComponent({
   components: { DocsMenuItem, SearchModal, GithubButton },
@@ -90,6 +94,8 @@ export default defineComponent({
       version,
       homeUrl,
       githubURL,
+      DONATE_URL: config.DONATE_URL,
+      coffeeImg,
     }
   },
   data() {
@@ -142,5 +148,16 @@ export default defineComponent({
 
 .main-search-icon {
   align-self: flex-end;
+}
+
+.buy-me-coffee {
+  color: #2a2a2a;
+  background-color: #e4d7c5;
+  @apply flex items-center;
+
+  img {
+    width: 50px;
+    margin-right: 10px;
+  }
 }
 </style>

@@ -8,6 +8,7 @@ export default {
   ANALYTICS_ID: 'G-L74NT4DL5X',
   ORIGIN_PROD: 'https://hetree.phphe.com', // production host name
   GIT_NAME: 'phphe/he-tree',
+  DONATE_URL: 'https://www.paypal.com/paypalme/phphe',
   VERSION: '2.x',
   MENU: [
     {

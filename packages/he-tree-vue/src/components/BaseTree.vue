@@ -15,7 +15,7 @@
         },
       ]" :style="stat.style" :stat="stat" :rtl="rtl" :btt="btt" :indent="indent" :table="table" :treeLine="treeLine"
         :treeLineOffset="treeLineOffset" :processor="processor" @click="$emit('click:node', stat)"
-        @open="$emit('open:node', $event)" @close="$emit('close:node', $event)" @check="$emit('check:node', $event)">
+        @open="$emit('open:node', $event)" @close="$emit('close:node', $event)" @check="$emit('check:node', $event)" @contextmenu="$emit('rightClick', $event, stat)">
         <template #default="{ indentStyle }">
           <template v-if="stat.data === placeholderData">
             <div v-if="!table" class="drag-placeholder he-tree-drag-placeholder">
@@ -115,6 +115,7 @@ const cpt = defineComponent({
     "open:node",
     "close:node",
     "check:node",
+    "rightClick",
     "beforeDragStart",
     "before-drag-start",
     "after-drop",
